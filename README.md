@@ -5,4 +5,4 @@
 
 ![Diagrama][diamagra-blocos]
 
-[diagrama-blocos]: https://raw.githubusercontent.com/guifrrs/Hotline-Bling/master/blocos.png?token=AP62K-wPb4N-qW78g7FZHpRYMhQ3q6vqks5XXLRpwA%3D%3D
+[diagrama-blocos]:https://github.com/guifrrs/Hotline-Bling/blob/master/blocos.png
