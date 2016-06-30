@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 
 entity Conta_DES is
 	port (CLK2, RST, EN: in std_logic;
@@ -15,11 +16,14 @@ architecture bhv_conta of Conta_DES is
 	begin
 		process(CLK2, RST, EN)
 			begin
+				temp <= "1111110010";
+				Conta_Des <= temp;
 				if RST = '0' then 
-					temp <= "1111110010"; 
+					temp <= "1111110010";
+					Conta_Des <= temp;
 				elsif rising_edge(CLK2) then
 					if EN = '1' then
-						if temp /= '0' then
+						if temp /= 0 then
 						temp <= temp - 1;
 						Conta_Des <= temp;
 						end if;
