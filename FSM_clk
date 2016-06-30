@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+
+entity FSM_clk is 
+		port(CLOCK_50, RST : in std_logic;
+				CLK1, CLK2: out std_logic);
+end FSM_clk;
+
+architecture FSM_bhv of FSM_clk is
+	type STATES is (S0);
+	signal EA, PE : STATES;
+	signal contador: std_logic_vector(27 downto 0);
+	signal contador2: std_logic_vector(27 downto 0);
+	
+begin
+	process(CLOCK_50, RST)
+		begin
+		if RST = '0' then
+			EA <= S0;
+		elsif CLOCK_50'event and CLOCK_50 = '1' then
+			EA <= PE;
+		end if;
+	end process;
+	
+	process(EA, CLOCK_50)
+	begin
+			case EA is
+				when S0 =>
+					contador <= contador + 1;
+					contador2 <= contador2 + 1;
+					CLK1 <= '0';
+					CLK2 <= '0';
+					PE <= S0;
+					if contador = x"2FAF07F" then
+						contador <= x"0000000";
+						CLK1 <= '1';
+						
+					elsif contador2 = x"BEBC1F" then   -- O CLK2 recebe 1 quando o sinal chega em 12.499.499, ou seja, 4 vezes por seg
+						contador2 <= x"0000000";
+						CLK2 <= '1';
+					end if;
+			end case;
+	end process;
+end FSM_bhv;
