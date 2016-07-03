@@ -138,7 +138,7 @@ architecture bhv_FSMC of FSM_Control is
 						 -- Estado S8.
 						 when S8 =>
 							
-						 	if(Saldo = '1' or Enter = '0') then
+						 	if(Saldo = '1' and Enter = '0') then
 								PE <= S7;
 							elsif Saldo = '0' then
 								PE <= S0;
