@@ -12,6 +12,7 @@ architecture bhv_reg of Registrador is
 
   begin
     process(Clk, Rst, En)
+    
       begin
         if Rst = '0' then -- Reset em 0, zera todos os registradores.
           Q <= (others => '0');
@@ -20,5 +21,6 @@ architecture bhv_reg of Registrador is
             Q <= D;
           end if;
         end if;
+        
     end process;
 end bhv_reg;
