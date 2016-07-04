@@ -19,11 +19,11 @@ architecture bhv_controlador of Topo_Controlador is
 
   component FSM_Control
     port (Clock_50, Reset, Enter: in std_logic;
-			Pass_Certo, Saldo: in std_logic;
-			Teste_Pass, Sel_Led, C3, C2, C1, C0: out std_logic;
-			Estados: out std_logic_vector(4 downto 0);
-			Tentativas, Sel_Disp: out std_logic_vector(1 downto 0)
-			);
+	  Pass_Certo, Saldo: in std_logic;
+	  Teste_Pass, Sel_Led, C3, C2, C1, C0: out std_logic;
+	  Estados: out std_logic_vector(4 downto 0);
+	  Tentativas, Sel_Disp: out std_logic_vector(1 downto 0)
+	  );
   end component;
 
   begin
