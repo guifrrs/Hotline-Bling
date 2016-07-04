@@ -20,7 +20,7 @@ architecture bhv_mux41 of Mux_41 is
       if(s = "00") then
 			m <= "00000000000000000000";
 		elsif (s = "01") then
-			m <= (In_Pass AND In_Pass) AND (In_Pass AND In_Pass);
+			m <= In_Pass & In_Pass & In_Pass & In_Pass;
 		elsif (s = "10") then
 			m <= Agenda;
 		else

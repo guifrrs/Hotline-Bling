@@ -13,12 +13,10 @@
 
 # top level source files:
 ### project_name.bdf Block diagram / Schematic file (top level schematic file, there may be many nested files)
-### project_name.vhd VHDL file (top level VHDL file)
 ### project_name.v Verilog file (top level Verilog file)
 
 # component source files:
 ### component_name.bsf Block Symbol file (component symbol file)
-### component_name.vhd VHDL file (top level VHDL file)
 ### component_name.v Verilog file (top level Verilog file)
 
 # SOPC builder project source files (SOPC builder creates many VHDL or Verilog files, that you do not need to store)
@@ -47,7 +45,6 @@
 !*.qws
 ##
 !*.bdf
-!*.vhd
 !*.v
 ##
 !*.ptf

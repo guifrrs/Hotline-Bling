@@ -12,9 +12,12 @@ end Mux_21;
 architecture bhv_mux21 of Mux_21 is
 
   begin
-    if(s = '0') then
+	process(s)
+	begin
+    if (s = '0') then
       m <= Conta_Des;
     else
-      m <- "00000000" and Tentativas;
+      m <= "00000000" & Tentativas;
     end if;
+	end process;
 end bhv_mux21;
