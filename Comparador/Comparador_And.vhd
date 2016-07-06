@@ -10,12 +10,8 @@ end Comparador_And;
 
 architecture bhv_compAnd of Comparador_And is
 	begin
-		process(Teste_Pass)
-		begin
-			if(Teste_Pass = '1') then
-				Pass_Certo <= Data;
-			else
-				Pass_Certo <= '0';
-			end if;
+		process(Teste_Pass, Data)
+			begin
+				Pass_Certo <= Data and Teste_Pass;
 		end process;
 end bhv_compAnd;
