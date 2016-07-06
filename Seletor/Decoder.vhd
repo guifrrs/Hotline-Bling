@@ -9,7 +9,7 @@ end Decoder;
 
 architecture bhv_decod of Decoder is
   begin
-    In_Pass <=  "00000" when SW = "0000000000" else -- 0
+    In_Pass <=  "00000" when SW = "0000000001" else -- 0
                 "00001" when SW = "0000000010" else -- 1
                 "00010" when SW = "0000000100" else -- 2
                 "00011" when SW = "0000001000" else -- 3
