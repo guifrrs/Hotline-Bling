@@ -14,7 +14,7 @@ architecture bhv_mux21 of Mux_21 is
   begin
 	process(s)
 	begin
-    if (s = '0') then
+    if (s = '1') then
       m <= Conta_Des;
     else
       m <= "00000000" & Tentativas;
