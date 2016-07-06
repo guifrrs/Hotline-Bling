@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity Mux_41 is
-  port (In_Pass: in std_logic_vector(4 downto 0);
+  port (In_Pass: in std_logic_vector(19 downto 0);
 			Agenda: in std_logic_vector(19 downto 0);
 			Conta_Asc: in std_logic_vector(19 downto 0);
 			s: in std_logic_Vector(1 downto 0);
@@ -20,7 +20,7 @@ architecture bhv_mux41 of Mux_41 is
       if(s = "00") then
 			m <= "00000000000000000000";
 		elsif (s = "01") then
-			m <= In_Pass & In_Pass & In_Pass & In_Pass;
+			m <= In_Pass;
 		elsif (s = "10") then
 			m <= Agenda;
 		else
