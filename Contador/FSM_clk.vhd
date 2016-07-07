@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
  
 entity FSM_clk is 
-	port(CLOCK_50, RST : in std_logic;
+	port(CLOCK_50: in std_logic;
 			CLK1, CLK2: out std_logic);
 end FSM_clk;
  

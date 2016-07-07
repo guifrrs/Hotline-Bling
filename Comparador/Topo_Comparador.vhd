@@ -16,8 +16,8 @@ architecture bhv_topoComp of Topo_Comparador is
 
 	component Comparador_Saldo
 		port (Conta_Des: in std_logic_vector(9 downto 0);
-					Saldo: out std_logic
-					);
+		     Saldo: out std_logic
+		     );
 	end component;
 	
 
@@ -29,9 +29,9 @@ architecture bhv_topoComp of Topo_Comparador is
 	
 	component Comparador_And
 		port (Data: in std_logic;
-				Teste_Pass: in std_logic;
-				Pass_Certo: out std_logic
-				);
+		     Teste_Pass: in std_logic;
+		     Pass_Certo: out std_logic
+		     );
 	end component;
 
 	begin
