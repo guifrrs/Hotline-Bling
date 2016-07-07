@@ -11,8 +11,7 @@ end Registrador;
 architecture bhv_reg of Registrador is
 
   begin
-    process(Clk, Rst, En)
-    
+    process(Clk, Rst, En)    
       begin
         if Rst = '0' then -- Reset em 0, zera todos os registradores.
           Q <= (others => '0');
@@ -20,7 +19,6 @@ architecture bhv_reg of Registrador is
           if En = '1' then -- Se o enable estiver em 1 na borda de subida do clock, a saída Q recebe o valor na entrada D.
             Q <= D;
           end if;
-        end if;
-        
+        end if;        
     end process;
 end bhv_reg;
