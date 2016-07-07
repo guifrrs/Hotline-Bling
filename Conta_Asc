@@ -25,17 +25,22 @@ begin
 				min2 <= "00000";
 				else
 					if CLK1'event and CLK1 = '1' then
-						seg1 <= seg1 + 1;
-							if seg1 = "01001" then
-								seg2 <= seg2 + 1;
-								seg1 <= "00000";
-								if seg2 <= "00101" then
-									min1 <= min1 + 1;
+							if seg1 /= "01001" then
+								seg1 <= seg1 + 1;
+							else
+								if seg2 /= "00101" then
+									seg1 <= "00000";
+									seg2 <= seg2 + 1;	
+								else
 									seg2 <= "00000";
-									if min1 <= "01001" then
-										min2 <= min1 + 1;
+									seg1 <= "00000";
+									if min1 /= "01001" then
+										min1 <= min1 + 1;
+									else
 										min1 <= "00000";
-										if min2 <= "01001" then
+										if min2 /= "01001" then
+											min2 <= min2 + 1;
+										else
 											min2 <= "00000";
 										end if;
 									end if;
