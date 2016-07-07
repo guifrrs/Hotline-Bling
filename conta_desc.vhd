@@ -3,17 +3,17 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 
-entity Conta_DES is
+entity Conta_Desc is
 	port (CLK2, RST, EN: in std_logic;
-			Conta_Des: out std_logic_vector(9 downto 0)
+			Conta_Desc: out std_logic_vector(9 downto 0)
 			);
-end Conta_DES;
+end Conta_Desc;
 
-architecture bhv_conta of Conta_DES is
+architecture bhv_conta of Conta_Desc is
 	signal temp : std_logic_vector(9 downto 0):= "1111110010";
 
 	begin
-	Conta_Des <= temp;
+	Conta_Desc <= temp;
 		process(CLK2, RST, EN)
 			begin
 				if RST = '0' then 
@@ -27,4 +27,3 @@ architecture bhv_conta of Conta_DES is
 				end if;
 			end process;
 end bhv_conta;
-
