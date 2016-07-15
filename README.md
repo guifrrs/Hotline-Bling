@@ -2,4 +2,4 @@
 
 ![Diagrama][diagrama-blocos]
 
-[diagrama-blocos]:http://imgur.com/cBP5ITm
+[diagrama-blocos]:http://i.imgur.com/cBP5ITm.png
